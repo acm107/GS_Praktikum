@@ -39,7 +39,7 @@ void print_Input(int wert){
 	}
 	char inputNumber[20];
 	int index = 0;
-	
+	TFT_set_font_color(GREEN);
 	TFT_set_window( FONTI, INPUTX, INPUTY, WIDTHI, ROWSI); 
 	snprintf(inputNumber, 50, "%d", wert);
 	TFT_cls();
@@ -55,7 +55,7 @@ void print_Stack(int wert){
 	}
 	char inputNumber[20];
 	int index = 0;
-	
+	TFT_set_font_color(YELLOW);
 	TFT_set_window( FONTS, STACKX, STACKY, WIDTHS, ROWSS); 
 	snprintf(inputNumber, 50, "%d", wert);
 	TFT_cls();
@@ -77,7 +77,7 @@ void stack_cls(){
 void print_stack_f(int wert){
 int index =0;
 	char zahlString[10];
-	
+	TFT_set_font_color(YELLOW);
 	snprintf(zahlString, 50, "%d", wert);
 	
 	do{

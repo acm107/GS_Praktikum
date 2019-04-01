@@ -83,5 +83,5 @@ void d(int);
 */
 void r(void);
 
-
+int sec(void);
 #endif

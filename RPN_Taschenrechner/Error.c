@@ -31,7 +31,7 @@ void setMessag(void){
 		case(STACKEMPTY): strcpy(messag, "1001 STACk IST LEER "); break;
 		case(NEEDSTWO):   strcpy(messag, "1002 NICHT GENUG ZAHL VORHANDEN "); break;
 		case(INTOVERFLOW): strcpy(messag, "1003 ZAHL UEBERSCHREIEN "); break;
-		case(NOTDIV0):    strcpy(messag, "1004 UNMOEGLIG");break;
+		case(NOTDIV0):    strcpy(messag, "1004 UNMOEGLIG DURCH 0");break;
 		case(INTUNDERFLOW): strcpy(messag, "1003 ZAHL UEBERSCHREIEN ");break;
 		case(FAIL): strcpy(messag, "FAIL"); break;
 	}
@@ -44,7 +44,7 @@ void printErrorMessag(void){
 	TFT_set_window( FONTE, ERRORX, ERRORY, WIDTHE, ROWSE); 
 	TFT_cls();
 	
-	TFT_set_font_color(3);
+	TFT_set_font_color(RED);
 	do{
 		TFT_putc(messag[index]);
 		index++;

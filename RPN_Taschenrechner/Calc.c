@@ -11,6 +11,7 @@
 #include "Stack.h"
 #include "Error.h"
 #include "Output.h"
+#include <stdint.h>
 
 	/**
   * @brief  Funktion * nimmt zwei Werte vom Stack, multipliziert sie und legt das Ergebnis
@@ -36,7 +37,7 @@ void multiplizieren(void){
   */
 void dividieren(void){
 	if(!containsTwo()){
-				error_code = NEEDSTWO;
+			error_code = NEEDSTWO;
 			printErrorMessag();
 		return;
 	}
@@ -45,6 +46,7 @@ void dividieren(void){
 	if(num1 == 0){
 		error_code = NOTDIV0;
 		printErrorMessag();
+		return;
 	}
 	push(num2 / num1);
 	print_Stack(p());
@@ -61,10 +63,30 @@ void addieren(void){
 			printErrorMessag();
 		return;
 	}
+	if(top()> 0 && sec() > 0){
+		int a = INT32_MAX - top();
+		int b=sec();
+		if(a <b)
+		{
+			error_code = INTOVERFLOW;
+			printErrorMessag();
+			return;
+		}
+	}else if(top() < 0 &&  sec() < 0){
+		if(INT32_MIN - top() > sec())
+		{
+			error_code = INTOVERFLOW;
+		printErrorMessag();
+			return;
+		}
+	}
 	int num1 = pop();
 	int num2 = pop();
+		
 	push(num2 + num1);
 	print_Stack(p());
+	
+	
 }
 
 /**
@@ -78,8 +100,26 @@ void subtrahieren(void){
 			printErrorMessag();
 		return;
 	}
+
+	if(top()> 0 && sec() > 0){
+		if(INT32_MIN + sec() < top())
+		{
+		error_code = INTOVERFLOW;
+		printErrorMessag();
+		}
+	}
+	else if(top() < 0 &&  sec() < 0)
+	{
+		if(INT32_MIN - top() < sec())
+		{
+		error_code = INTOVERFLOW;
+		printErrorMessag();
+		}
+	}
 	int num1 = pop();
 	int num2 = pop();
+		
 	push(num2 - num1);
 	print_Stack(p());
+	
 }

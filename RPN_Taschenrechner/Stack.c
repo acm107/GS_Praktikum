@@ -86,6 +86,9 @@ int top(void){
 	}
 }
 
+int sec(void){
+	return stack[pointer -2];
+}
 /**
 *@brief ob es zwei Zahl auf dem Stack gibt.
 *@return zahl,  0 ist false und 1 ist true
