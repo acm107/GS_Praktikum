@@ -84,29 +84,33 @@ void reactToInput(int wert)
 	}
 	
 	switch(wert)
-	{
-		case '+': addieren(); break; /*finish*/
-		case '-': subtrahieren(); break; /*finish*/
-	  case '*': multiplizieren();break; /*finish*/
-		case '/': dividieren(); break;  /*finish*/
-		case 'r': r(); break; /*finish*/
-		case 'd': d(pop()); break; /*finish*/
+	{	
+	
+		case '+': input_check(); addieren() ; break; /*finish*/
+		case '-': input_check(); subtrahieren(); break; /*finish*/
+		case '*': input_check(); multiplizieren();break; /*finish*/
+		case '/': input_check(); dividieren(); break;  /*finish*/
+		case 'r': input_check();r(); break; /*finish*/
+		case 'd': input_check();d(top()); break; /*finish*/
 		case 'p': print_Stack(p()); break; /*finish*/
 		case 'c': c();TFT_cls(); zahl = 0; break; /*finish*/
 		case 'f': f(); break;
-		case ' ': if(inputZ == 1)
-							{
-							push(zahl);
-							print_Stack(zahl);					/*finish*/
-							input_cls();
-							zahl =0 ; inputZ = 0; break;	
-								
-							}
-	
-			
+		case ' ': break;
+		case 'e': if(inputZ == 1){	
+					push(zahl);
+					print_Stack(zahl);					/*finish*/
+					input_cls();
+					zahl =0 ; inputZ = 0; break;				
+					}	
 	}	
 }
 
-
-
+void input_check(void){
+	if(inputZ == 1){
+		push(zahl);
+		print_Stack(zahl);	/*finish*/
+		input_cls();
+		zahl =0 ; inputZ = 0;
+	}
+}
 

@@ -58,7 +58,7 @@ int pop(void){
 *@return zahl, 0 ist false und 1 ist true
 */
 bool isEmpty(void){
-	return (pointer ==0) ? true : false;
+	return (pointer == 0) ? true : false;
 }
 
 /**

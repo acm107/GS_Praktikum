@@ -26,6 +26,16 @@ void multiplizieren(void){
 	}
 	int num1 = pop();
 	int num2 = pop();
+	if(num1 > INT32_MAX/num2){
+		error_code = INTOVERFLOW;
+		printErrorMessag();
+		return;
+	}
+	if(num1 < INT32_MIN/num2){
+		error_code = INTOVERFLOW;
+		printErrorMessag();
+		return;
+	}
 	push(num2 * num1);
 	print_Stack(p());
 }
@@ -63,25 +73,24 @@ void addieren(void){
 			printErrorMessag();
 		return;
 	}
-	if(top()> 0 && sec() > 0){
-		int a = INT32_MAX - top();
-		int b=sec();
-		if(a <b)
+	int num1 = pop();
+	int num2 = pop();
+	
+	if(num1> 0 && num2 > 0){
+		if(num1 >INT32_MAX -num2)
 		{
 			error_code = INTOVERFLOW;
 			printErrorMessag();
 			return;
 		}
-	}else if(top() < 0 &&  sec() < 0){
-		if(INT32_MIN - top() > sec())
+	}else if(num2 < 0 &&  num1 < 0){
+		if(INT32_MIN - num1 > num2)
 		{
 			error_code = INTOVERFLOW;
 		printErrorMessag();
 			return;
 		}
 	}
-	int num1 = pop();
-	int num2 = pop();
 		
 	push(num2 + num1);
 	print_Stack(p());
@@ -100,24 +109,24 @@ void subtrahieren(void){
 			printErrorMessag();
 		return;
 	}
-
-	if(top()> 0 && sec() > 0){
-		if(INT32_MIN + sec() < top())
-		{
-		error_code = INTOVERFLOW;
-		printErrorMessag();
-		}
-	}
-	else if(top() < 0 &&  sec() < 0)
-	{
-		if(INT32_MIN - top() < sec())
-		{
-		error_code = INTOVERFLOW;
-		printErrorMessag();
-		}
-	}
 	int num1 = pop();
 	int num2 = pop();
+	
+	if(num1> 0 && num2 > 0){
+		if(num1 >INT32_MAX -num2)
+		{
+			error_code = INTOVERFLOW;
+			printErrorMessag();
+			return;
+		}
+	}else if(num2 < 0 &&  num1 < 0){
+		if(INT32_MIN - num1 > num2)
+		{
+			error_code = INTOVERFLOW;
+		printErrorMessag();
+			return;
+		}
+	}
 		
 	push(num2 - num1);
 	print_Stack(p());

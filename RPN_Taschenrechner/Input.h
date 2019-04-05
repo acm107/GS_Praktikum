@@ -15,4 +15,5 @@
 void reactToInput(int wert);
 int getInput(void);
 void make_Lines(void);
-
+void input_check(void);
+void last_zahl_del(void);

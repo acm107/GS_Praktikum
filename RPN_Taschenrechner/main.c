@@ -40,12 +40,18 @@
 int main(void)
 {
   Init_TI_Board();
+//	TFT_Init();
+//	
+//	TFT_gotoxy(15, 7);
+//	TFT_puts("Hallo Wolrd");
 	Make_Touch_Pad();
 	make_Lines();
 	while(true){
 	reactToInput(getInput());
 		
 	}
+	
+	
 //  return 0;
 }
 // EOF
