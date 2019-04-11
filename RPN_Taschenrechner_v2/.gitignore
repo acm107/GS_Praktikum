@@ -1,0 +1,31 @@
+###################################
+### .gitignore for Keil uVision ###
+###################################
+
+# exclude Objects Directory
+Objects/
+# exclude Listings Directory
+Listings/
+
+# exclude personal uvgui files
+*.uvgui.*
+
+#exclude backup copys
+*.bak
+
+#exclude deb-files
+*.dep
+
+# exclude annoying stuff from OS
+# ==============================
+#
+# exclude annoying stuff: DOSe
+System\ Volume\ Information
+**/Thumbs.db
+**/*.swp
+#
+# exclude annoying stuff: Mac OS X
+**/.DS_Store
+
+# (re-)include (only for safety's sake - since it has NOT been excluded before)
+!.gitignore
