@@ -42,7 +42,7 @@ uint8_t dg_state = 0;
 float Geschwindigkeit = 0;
 float Dreh_Winkel = 0;
 uint8_t ptr_dir = 0;
-
+State_Type curr_state = START;
 uint16_t (*state_table[])(uint8_t, uint8_t *) = {s_p, a_p, b_p, c_p, d_p, e_p};
 
 

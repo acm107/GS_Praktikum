@@ -901,6 +901,11 @@
               <FileType>5</FileType>
               <FilePath>.\Auswertung.h</FilePath>
             </File>
+            <File>
+              <FileName>Output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Output.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1929,6 +1934,11 @@
               <FileType>5</FileType>
               <FilePath>.\Auswertung.h</FilePath>
             </File>
+            <File>
+              <FileName>Output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Output.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2788,6 +2798,11 @@
               <FileName>Auswertung.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Auswertung.h</FilePath>
+            </File>
+            <File>
+              <FileName>Output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Output.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3747,6 +3762,11 @@
               <FileName>Auswertung.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Auswertung.h</FilePath>
+            </File>
+            <File>
+              <FileName>Output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Output.c</FilePath>
             </File>
           </Files>
         </Group>

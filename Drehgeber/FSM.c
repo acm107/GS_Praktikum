@@ -10,7 +10,9 @@
 #include "FSM.h"
 int16_t count = 0;
 uint8_t dir = 0;
-State_Type curr_state = START;
+
+extern State_Type curr_state;
+//State_Type curr_state = START;
 
 
 

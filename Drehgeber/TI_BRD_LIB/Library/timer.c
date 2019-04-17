@@ -15,9 +15,9 @@ void timerinit(void){
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN; /* Takt fuer Timer 2 einschalten */
     TIM2->CR1 = 0;                      /* Timer disabled                */
     TIM2->CR2 = 0;                      /*                               */
-    TIM2->PSC = 0;                      /* Prescaler   (84MHz)           */
+    TIM2->PSC = 84;                      /* Prescaler   (84MHz)           */
 #ifndef SIMULATION
-    TIM2->ARR = 0xffffffff;             /* Auto reload register          */
+    TIM2->ARR = 0xf4240;             /* Auto reload register          */
 #else
     TIM2->ARR = 0xffff;             		/* Auto reload register          */
 #endif
