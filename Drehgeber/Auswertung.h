@@ -7,5 +7,6 @@
 #define Winkel_pro_Puls 0.3 // 360/1200
 
 int8_t gibWinkel(uint8_t counter, float* winkel); // 
+int8_t gibWinkelgeschwindigkeit(float* winkel); // 
 
 #endif

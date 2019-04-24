@@ -24,7 +24,9 @@
 #define _OUTPUT_H
 
 void init_display(void);
+void print_speed(void);
 
+void turnOnLED(void);
 
 
 

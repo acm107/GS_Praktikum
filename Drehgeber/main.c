@@ -20,6 +20,7 @@
 #include "tft.h"
 #include "FSM.h"
 #include "input.h"
+#include "output.h"
 
 //--- For GPIOs -----------------------------
 //Include instead of "stm32f4xx.h" for
@@ -50,7 +51,7 @@ int main(void)
 {
 	
 	Init_TI_Board();
-	//init_Disp();
+	init_display();
 	while(1)
 	{
 		

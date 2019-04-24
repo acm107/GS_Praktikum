@@ -28,7 +28,9 @@ void init_display(void)
 	TFT_set_font_color(3);
 }
 
-void turnOnLED(){
+
+
+void turnOnLED(void){
 	
 if(pin6_Pressed){
 

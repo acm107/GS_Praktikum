@@ -30,4 +30,6 @@ void timerinit(void);
 */
 uint32_t getTimeStamp(void);
 
+void resetTime(void);
+
 #endif
