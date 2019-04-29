@@ -47,6 +47,19 @@ State_Type curr_state = START;
 uint16_t (*state_table[])(uint8_t, uint8_t *) = {s_p, a_p, b_p, c_p, d_p, e_p};
 
 
+void checkButtons()
+{
+	while(pin7_Pressed())
+	{
+			//reset data
+		int a= pin7_Pressed();
+	}
+	while(pin6_Pressed())
+	{
+		//reset state
+	}
+}
+
 int main(void)
 {
 	
@@ -55,7 +68,7 @@ int main(void)
 	while(1)
 	{
 		
-	
+		checkButtons();
         //Input
         signalLesen(&dg_state);
 

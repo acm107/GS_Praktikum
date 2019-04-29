@@ -51,12 +51,12 @@ int8_t signalLesen (uint8_t *dg)
 
 }
 
-bool pin6_Pressed(void)
+int pin6_Pressed(void)
 {
 	return (IDR_MASK_PIN_6 != (GPIOE->IDR & IDR_MASK_PIN_6));
 }
 
-bool pin7_Pressed(void)
+int pin7_Pressed(void)
 {
 	return (IDR_MASK_PIN_7 != (GPIOE->IDR & IDR_MASK_PIN_7));
 }

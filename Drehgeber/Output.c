@@ -10,6 +10,9 @@
 
 #include "output.h"
 #include "Input.h"
+
+#define MASK_PIN_8_15		  (0xFFU << 8)
+
 void init_display(void)
 {
 	TFT_set_window(FONT, INPUTXI, INPUTYI, WIDTHI, ROWSI);
@@ -29,15 +32,31 @@ void init_display(void)
 }
 
 
-
-void turnOnLED(void){
-	
-if(pin6_Pressed){
-
+void LEDs_Richtung(//richtung)
+{
+	if(//richtung == LEFT)
+	{
+		GPIOG->BSRRL = MASK_PIN_7;
+		GPIOG->BSRRH = MASK_PIN_6;
+	}
+	else if(//richtung == RIGHT)
+	{
+		GPIOG->BSRRL = MASK_PIN_6;
+		GPIOG->BSRRH = MASK_PIN_7;
+	}
+	else
+	{
+		GPIOG->BSRRH = MASK_PIN_7;
+		GPIOG->BSRRH = MASK_PIN_6;
+	}		
 }
 
-if(pin7_Pressed){
-	
+void counter_LED_8_15(char counter)
+{
+	GPIOG->BSRRH = MASK_PIN_8_15; // LEDs off
+	GPIOG->BSRRL = counter << 8; 	// LEDs on
 }
+
+
 	
 }
