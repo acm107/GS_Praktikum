@@ -1,0 +1,3 @@
+[submodule "TI_BRD_LIB"]
+	path = TI_BRD_LIB
+	url = https://gitlab.informatik.haw-hamburg.de/tiboard_dev/TI_BRD_LIB.git

@@ -1,0 +1,13 @@
+/*
+
+
+- Dreh_Winkel darf nur max 360 Grad sein. Bei uns kann mehr gehen. z.B 1000
+
+- Dreh_Winkel in Integer und nicht float
+
+- Ausgabe: Itoi für Dreh_Winkel ( weil int) 
+           und angepasster Itoi für Geschwindigkeit ( weil float und nicht int) 
+
+
+
+*/
